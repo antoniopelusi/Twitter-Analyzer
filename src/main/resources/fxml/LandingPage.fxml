@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<AnchorPane fx:id="anchorPane" minHeight="400.0" minWidth="450.0" prefHeight="563.0" prefWidth="700.0"
+            styleClass="grey2" stylesheets="@../styleCSS/application.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.g3_dev.LandingPage">
+    <children>
+        <TextField fx:id="searchField" layoutX="14.0" layoutY="143.0" prefHeight="27.0" prefWidth="308.0"
+                   promptText="%placeholder_searchBar" styleClass="white" AnchorPane.leftAnchor="14.0"
+                   AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="107.0"/>
+        <ComboBox fx:id="searchTopic" layoutX="362.0" layoutY="108.0" onAction="#adaptGui" prefWidth="150.0"
+                  AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="107.0"/>
+        <Button fx:id="btnSearch" layoutX="526.0" layoutY="107.0" mnemonicParsing="false" onAction="#searchForResults"
+                styleClass="twitter_blue" text="%btn_search" textFill="WHITE" AnchorPane.rightAnchor="14.0"
+                AnchorPane.topAnchor="107.0"/>
+        <ListView fx:id="listResults" layoutY="178.0" prefHeight="338.0" prefWidth="572.0" styleClass="light_grey_smoke"
+                  AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+                  AnchorPane.topAnchor="174.0">
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="%lbl_moreDetails" onAction="#openDetailedTweet"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </ListView>
+        <Button fx:id="btnAnalyze" layoutX="14.0" layoutY="374.0" mnemonicParsing="false" onAction="#analyzeResults"
+                styleClass="twitter_blue" text="%btn_Analyze" textAlignment="CENTER" textFill="WHITE"
+                AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0"/>
+        <Button fx:id="btnHistory" layoutX="525.0" layoutY="360.0" mnemonicParsing="false" onAction="#openHistory"
+                styleClass="light_grey_smoke" text="%btn_toHistory" AnchorPane.bottomAnchor="14.0"
+                AnchorPane.rightAnchor="45.0"/>
+        <HBox alignment="CENTER" prefHeight="92.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="101.0" fitWidth="643.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logoTwitter.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <CheckBox fx:id="cbGeo" layoutX="556.0" layoutY="110.0" mnemonicParsing="false" prefHeight="27.0"
+                  text="%cbx_geo" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="107.0"/>
+        <Button fx:id="btnSettings" layoutX="485.0" layoutY="521.0" mnemonicParsing="false" onAction="#openSettings"
+                prefHeight="27.0" prefWidth="27.0" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="7.0"/>
+        <Label labelFor="$dpStart" fx:id="lbl1" layoutX="37.0" layoutY="221.0" maxHeight="27.0" minHeight="27.0"
+               prefHeight="27.0" text="%lbl_cal_from" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="141.0"/>
+        <Label labelFor="$dpEnd" fx:id="lbl2" layoutX="212.0" layoutY="221.0" maxHeight="27.0" minHeight="27.0"
+               prefHeight="27.0" text="%lbl_cal_to" AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="141.0"/>
+        <Button fx:id="btnClear" layoutX="629.0" layoutY="142.0" mnemonicParsing="false" onAction="#resetGUI"
+                styleClass="light_grey_smoke" text="%btn_clear" AnchorPane.rightAnchor="14.0"
+                AnchorPane.topAnchor="141.0"/>
+        <DatePicker fx:id="dpStart" layoutX="314.0" layoutY="234.0" maxWidth="170.0" minWidth="170.0" prefWidth="170.0"
+                    AnchorPane.leftAnchor="49.0" AnchorPane.topAnchor="141.0"/>
+        <DatePicker fx:id="dpEnd" layoutX="57.0" layoutY="233.0" maxWidth="170.0" minWidth="170.0" prefWidth="170.0"
+                    AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="141.0"/>
+        <Button fx:id="btnDateInfo" layoutX="432.0" layoutY="142.0" mnemonicParsing="false" onAction="#showDateInfo"
+                AnchorPane.leftAnchor="433.0" AnchorPane.topAnchor="139.0"/>
+    </children>
+</AnchorPane>

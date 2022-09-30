@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="247.0" minHeight="247.0" minWidth="600.0" prefHeight="247.0" prefWidth="600.0"
+            stylesheets="@../styleCSS/application.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.g3_dev.ApiKeysForm">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="apiKey" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+        <Label layoutX="14.0" layoutY="80.0" text="apiSecretKey" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="62.0"/>
+        <Label layoutX="24.0" layoutY="161.0" text="accessToken" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="110.0"/>
+        <Label layoutX="24.0" layoutY="200.0" text="accessTokenSecret" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="158.0"/>
+        <TextField fx:id="txtApiKey" layoutX="14.0" layoutY="38.0" promptText="%placeholder_ih1"
+                   AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="31.0"/>
+        <TextField fx:id="txtApiSecretKey" layoutX="24.0" layoutY="112.0" promptText="%placeholder_ih2"
+                   AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="79.0"/>
+        <TextField fx:id="txtAccessToken" layoutX="43.0" layoutY="178.0" promptText="%placeholder_ih3"
+                   AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="127.0"/>
+        <TextField fx:id="txtAccessTokenSecret" layoutX="24.0" layoutY="224.0"
+                   promptText="%placeholder_ih4" AnchorPane.leftAnchor="14.0"
+                   AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="175.0"/>
+        <Button layoutX="531.0" layoutY="211.0" mnemonicParsing="false" onAction="#saveAPIkeys"
+                styleClass="twitter_blue" text="%btn_save" textFill="WHITE" AnchorPane.rightAnchor="14.0"
+                AnchorPane.topAnchor="210.0"/>
+    </children>
+</AnchorPane>

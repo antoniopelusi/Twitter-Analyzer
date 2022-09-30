@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="200.0" minHeight="200.0" prefHeight="200.0" prefWidth="600.0"
+            stylesheets="@../styleCSS/application.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.g3_dev.TweetWindow">
+    <Label fx:id="lblUsername" layoutX="106.0" layoutY="14.0" styleClass="name_twitter"
+           stylesheets="@../styleCSS/application.css" text="Username" AnchorPane.leftAnchor="100.0"
+           AnchorPane.topAnchor="14.5">
+        <font>
+            <Font name="Helvetica Neue" size="18.0"/>
+        </font>
+    </Label>
+    <Label fx:id="lblDate" layoutX="88.0" layoutY="44.0" text="Timestamp" AnchorPane.leftAnchor="101.0"
+           AnchorPane.topAnchor="43.5"/>
+    <Label fx:id="lblPosto" layoutX="88.0" layoutY="66.0" text="Posto" AnchorPane.leftAnchor="101.0"
+           AnchorPane.topAnchor="66.5"/>
+    <TextArea fx:id="txtaTweetContent" editable="false" layoutX="192.0" layoutY="17.0" minHeight="69.0"
+              prefWidth="200.0"
+              AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+              AnchorPane.topAnchor="100.0"/>
+    <StackPane fx:id="spProPic" styleClass="propic_twitter_sp" maxHeight="72.0" maxWidth="69.0" minHeight="69.0"
+               minWidth="69.0" prefHeight="69.0" prefWidth="72.0" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="14.0">
+        <ImageView fx:id="imgUserProPic" fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true"
+                   styleClass="propic_twitter"/>
+    </StackPane>
+</AnchorPane>

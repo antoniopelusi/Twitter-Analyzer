@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="700.0" maxWidth="1200.0" minHeight="700.0" minWidth="1200.0" prefHeight="700.0"
+            prefWidth="1200.0" stylesheets="@../styleCSS/application.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.g3_dev.AnalyzedResultsComplete">
+    <children>
+        <StackPane fx:id="spMap" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="300.0"/>
+        <ImageView fx:id="imgWordCloud" fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <BarChart fx:id="bcHistogram" maxHeight="300.0" minHeight="300.0" prefHeight="300.0"
+                  stylesheets="@../styleCSS/application.css" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0"
+                  AnchorPane.topAnchor="0.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" stylesheets="@../styleCSS/application.css">
+                    <tickLabelFont>
+                        <Font name="Helvetica Neue" size="10.0"/>
+                    </tickLabelFont>
+                </CategoryAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" stylesheets="@../styleCSS/application.css">
+                    <tickLabelFont>
+                        <Font name="Helvetica Neue" size="10.0"/>
+                    </tickLabelFont>
+                </NumberAxis>
+            </yAxis>
+        </BarChart>
+        <AnchorPane layoutX="716.0" layoutY="313.0" maxHeight="300.0" maxWidth="400.0" minHeight="300.0"
+                    minWidth="400.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: whitesmoke;"
+                    stylesheets="@../styleCSS/application.css" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+            <children>
+                <Label fx:id="lblNumTweet" layoutX="14.0" layoutY="14.0" text="Numero di tweet : "
+                       AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+                <Label fx:id="lblMediaOraria" layoutX="24.0" layoutY="24.0" text="Media oraria : "
+                       AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="37.0"/>
+                <Label fx:id="lblNumTweetGeo" layoutX="34.0" layoutY="34.0" text="Numero di tweet geolocalizzati : "
+                       AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="60.0"/>
+                <Label fx:id="lblPercTweetGeo" layoutX="24.0" layoutY="70.0" stylesheets="@../styleCSS/application.css"
+                       text="Percentuale di tweet geolocalizzati : " AnchorPane.leftAnchor="14.0"
+                       AnchorPane.topAnchor="83.0"/>
+                <Button fx:id="btnHourAvgDetails" layoutX="297.0" layoutY="33.0" mnemonicParsing="false"
+                        onAction="#getDetailedBarchartHourAvg" stylesheets="@../styleCSS/application.css"
+                        text="%lbl_moreDetails" textFill="#5197ff" AnchorPane.leftAnchor="160.0"
+                        AnchorPane.topAnchor="32.0"/>
+                <Label fx:id="lblNumTweetImg" layoutX="24.0" layoutY="93.0" stylesheets="@../styleCSS/application.css"
+                       text="Numero tweet dotati di immagini : " AnchorPane.leftAnchor="14.0"
+                       AnchorPane.topAnchor="106.0"/>
+                <Button fx:id="btnShare" layoutX="331.0" layoutY="361.0" mnemonicParsing="false"
+                        onAction="#shareAnalysis" styleClass="twitter_blue" text="%btn_share" textFill="WHITE"
+                        AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0"/>
+                <Button fx:id="btnGeoDetails" layoutX="14.0" layoutY="360.0" mnemonicParsing="false"
+                        onAction="#openGeoDeteails" text="%btn_geoDetails" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

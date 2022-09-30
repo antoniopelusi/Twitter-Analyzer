@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@../styleCSS/application.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.g3_dev.GeoDetails">
+    <children>
+        <ListView fx:id="lvCountry" layoutX="14.0" layoutY="14.0" maxWidth="150.0" minWidth="150.0"
+                  onMouseClicked="#selectCountry" prefHeight="200.0" prefWidth="150.0" AnchorPane.bottomAnchor="14.0"
+                  AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="37.0"/>
+        <ListView fx:id="lvRegion" layoutX="223.0" layoutY="14.0" maxWidth="230.0" minWidth="230.0"
+                  onMouseClicked="#selectRegion" prefHeight="200.0" prefWidth="230.0" AnchorPane.bottomAnchor="14.0"
+                  AnchorPane.leftAnchor="178.0" AnchorPane.topAnchor="37.0"/>
+        <ListView fx:id="lvTown" layoutX="431.0" layoutY="186.0" maxWidth="200.0" minWidth="200.0" prefHeight="200.0"
+                  prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="422.0"
+                  AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="37.0"/>
+        <Label layoutX="14.0" layoutY="14.0" text="%lbl_country" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="14.0"/>
+        <Label layoutX="178.0" layoutY="14.0" text="%lbl_region" AnchorPane.leftAnchor="178.0"
+               AnchorPane.topAnchor="14.0"/>
+        <Label layoutX="392.0" layoutY="14.0" text="%lbl_town" AnchorPane.leftAnchor="422.0"
+               AnchorPane.topAnchor="14.0"/>
+    </children>
+</AnchorPane>

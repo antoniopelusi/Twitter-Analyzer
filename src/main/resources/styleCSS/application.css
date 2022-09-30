@@ -1,0 +1,111 @@
+.root{
+    -fx-font-size: 11pt;
+    -fx-font-family: "Helvetica Neue";
+/*    -fx-base: rgb(123, 182, 1);
+    -fx-background: rgb(242, 242, 242);*/
+}
+
+#btnSettings {
+    -fx-graphic: url("/images/settings.png");
+    -fx-background-color: transparent;
+}
+
+#btnDateInfo {
+    -fx-graphic: url("/images/infoIcon.png");
+    -fx-background-color: transparent;
+}
+
+#btnHourAvgDetails {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane {
+    -fx-font-family: "Helvetica Neue";
+}
+
+#ok-btn {
+    -fx-base: rgb(29, 161, 242);
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.chart-bar {
+    -fx-bar-fill: rgb(29, 161, 242);
+}
+
+.axis {
+    -fx-font-family: "Helvetica Neue";
+}
+
+
+
+/* PALETTE COLORI GREY & GREEN */
+.apple_green{
+    -fx-base: rgb(123, 182, 1);
+}
+
+.android_green{
+    -fx-base: rgb(179, 207, 50);
+}
+
+.anti-flash_white{
+    -fx-base: rgb(242, 242, 242);
+}
+
+.light_grey{
+    -fx-base: rgb(211, 211, 211);
+}
+
+.X11_gray{
+    -fx-base: rgb(189, 189, 189);
+}
+
+.grey{
+    -fx-base: rgb(128, 128, 128);
+}
+
+/* PALETTE COLORI BLUE & WHITE */
+.dark_blue{
+    -fx-base: rgb(11, 47, 71);
+}
+
+.blue_navy{
+    -fx-base: rgb(34, 78, 107);
+}
+
+.light_blue{
+    -fx-base: rgb(49, 140, 184);
+}
+
+.light_grey_smoke{
+    -fx-base: rgb(242,243,247);
+}
+
+.white{
+    -fx-base: rgb(255,255,255);
+}
+
+.twitter_blue{
+    -fx-base: rgb(29, 161, 242);
+    -fx-font-weight: bold;
+}
+
+.name_twitter {
+    -fx-font-family: "Helvetica Neue";
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.propic_twitter {
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-border-style: solid;
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+.propic_twitter_sp {
+    -fx-padding: 5;
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 20;
+}
